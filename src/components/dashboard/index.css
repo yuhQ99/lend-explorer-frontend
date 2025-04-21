@@ -1,0 +1,88 @@
+/* Add these styles for consistent font rendering */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Table header styles */
+.table-header {
+  background: #1A1A1A;
+  border-bottom: 1px solid #333333;
+}
+
+.table-header th {
+  position: relative;
+  font-weight: 300;
+  font-family: 'Mulish', sans-serif;
+  color: #999999;
+  font-size: 13px;
+  letter-spacing: 0.2px;
+}
+
+.table-header th:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Custom scrollbar styling */
+.grid-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.grid-container::-webkit-scrollbar-track {
+  background: #1A1A1A;
+  border-radius: 4px;
+}
+
+.grid-container::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+
+.grid-container::-webkit-scrollbar-thumb:hover {
+  background: #444;
+}
+
+/* Table row hover effect */
+tbody tr:hover {
+  background-color: #333333 !important;
+  transition: background-color 0.2s ease;
+}
+
+/* Sticky header */
+thead tr {
+  position: sticky;
+  top: 0;
+  background-color: #1A1A1A;
+  z-index: 1;
+}
+
+/* Table header divider */
+.header-divider {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 14px;
+  background: #333333;
+}
+
+/* Search input focus styles */
+input[type="text"]:focus {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Search input placeholder styles */
+input[type="text"]::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Search input autofill styles */
+input[type="text"]:-webkit-autofill,
+input[type="text"]:-webkit-autofill:hover,
+input[type="text"]:-webkit-autofill:focus {
+  -webkit-text-fill-color: white;
+  -webkit-box-shadow: 0 0 0px 1000px rgba(255, 255, 255, 0.1) inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
