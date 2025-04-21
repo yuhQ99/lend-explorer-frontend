@@ -1,4 +1,4 @@
-const hostApp = 'http://localhost:3000';
+const hostApp = import.meta.env.VITE_API_URL || 'http://localhost:3001';
 
 const CommonCall = async (api, header, config) => {
   const { isReturnError } = config;
