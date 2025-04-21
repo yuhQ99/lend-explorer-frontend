@@ -18,8 +18,18 @@ const Dashboard = () => {
   const limit = 10;
 
   const handleDateChange = (e) => {
-    const newDate = e.target.value;
-    setSearchDate(newDate);
+    const selectedDate = new Date(e.target.value);
+    const today = new Date();
+    today.setHours(23, 59, 59, 999); // Set to end of today
+
+    if (selectedDate > today) {
+      // If selected date is in the future, set to current date and time
+      const currentDateTime = new Date();
+      const formattedDateTime = currentDateTime.toISOString().slice(0, 19);
+      setSearchDate(formattedDateTime);
+    } else {
+      setSearchDate(e.target.value);
+    }
   };
 
   const handleInputChange = (e) => {
@@ -156,6 +166,7 @@ const Dashboard = () => {
               type="datetime-local"
               value={searchDate}
               onChange={handleDateChange}
+              max={new Date().toISOString().slice(0, 19)} // Set max attribute to current date/time
               step="1"
               style={{
                 width: '200px',

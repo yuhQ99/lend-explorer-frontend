@@ -13,4 +13,6 @@ If you are developing a production application, we recommend using TypeScript wi
 
 ## Run:
 - ```cp .env.example .env```
-- 
+- Add `VITE_API_URL=http://localhost:3000` to .env
+- ```npm i```
+- ```npm run dev```
