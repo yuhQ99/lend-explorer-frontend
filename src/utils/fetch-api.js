@@ -42,7 +42,7 @@ export const FetchApi = {
         method: 'POST',
         body: JSON.stringify({
           date: data.date,
-          user: data.user,
+          user: data.user.toLowerCase(),
         }),
       };
       api = `${hostApp}/v1/current-position/snapshot`;
@@ -52,7 +52,7 @@ export const FetchApi = {
       };
       api = `${hostApp}/v1/current-position?page=${data.page}&limit=${data.limit}&sortBy=${data.sortBy}`;
       if (data.user) {
-        api += `&user=${data.user}`;
+        api += `&user=${data.user.toLowerCase()}`;
       }
     } 
     return CommonCall(api, header, {});
