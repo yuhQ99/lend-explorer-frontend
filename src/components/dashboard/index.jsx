@@ -100,7 +100,7 @@ const Dashboard = () => {
             'USDC',
             'WBTC',
             'COREBTC',
-            'ABTC'
+            'aBTC'
           ].map((token) => (
             <Link
               key={token}
