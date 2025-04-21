@@ -372,7 +372,7 @@ const CoinDetails = () => {
             'USDC',
             'WBTC',
             'COREBTC',
-            'ABTC'
+            'aBTC'
           ].map((token) => {
             const isActive = symbol === token;
             
