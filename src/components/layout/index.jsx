@@ -94,7 +94,7 @@ const Layout = () => {
             fontWeight: 700,
             fontSize: "18px",
           }}>
-            <img src="/src/assets/core_logo_light.svg" alt="COLEND" style={{ height: "20px", marginRight: "8px" }}/>
+            <img src="/core_logo_light.svg" alt="COLEND" style={{ height: "20px", marginRight: "8px" }}/>
           </Link>
 
           {/* Desktop Navigation */}
@@ -168,7 +168,7 @@ const Layout = () => {
             alignItems: "center",
             gap: "8px",
           }}>
-            <img src="/src/assets/metamask-icon.png" alt="" style={{ height: "16px" }}/>
+            <img src="/metamask-icon.png" alt="" style={{ height: "16px" }}/>
             <span>0x4...3247</span>
           </button>
 

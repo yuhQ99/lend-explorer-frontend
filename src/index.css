@@ -6,7 +6,7 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
-  background-image: url('/src/assets/bg-img.png');
+  background-image: url('/bg-img.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
