@@ -22,13 +22,6 @@ const Table = ({ data, isLoading, isError, sortBy, headers, onSort }) => {
     onSort(newSortBy);
   };
 
-
-  function formatStringNumber(str, decimals = 2) {
-    const num = parseFloat(str);
-    if (isNaN(num)) return 'Invalid number';
-    return num.toFixed(decimals);
-  }
-
   return (
     <div style={{ position: 'relative', overflow: 'auto' }}>
       <table style={{

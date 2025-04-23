@@ -13,7 +13,7 @@ import {
 import { Link } from 'react-router-dom';
 import { Bar } from 'react-chartjs-2';
 import { FetchApi } from '../../utils/fetch-api.js';
-import { truncateAddress } from '../../utils/format.js';
+import { truncateAddress, formatNumberWithCommas } from '../../utils/format.js';
 
 ChartJS.register(
   CategoryScale,
@@ -140,7 +140,7 @@ const CoinDetails = () => {
           {data?.results.map((row, index) => (
             <tr key={index} style={{ backgroundColor: 'rgba(42, 42, 42, 0.85)' }}>
               <td style={{ padding: '12px', color: 'white' }}>{truncateAddress(row.user)}</td>
-              <td style={{ padding: '12px', color: 'white' }}>{row.amount}</td>
+              <td style={{ padding: '12px', color: 'white' }}>{formatNumberWithCommas(row.amount)}</td>
             </tr>
           ))}
         </tbody>
@@ -300,15 +300,7 @@ const CoinDetails = () => {
         padding: '20px',
         marginTop: '24px'
       }}>
-        <div style={{ 
-          display: 'flex', 
-          justifyContent: 'space-between', 
-          alignItems: 'center', 
-          marginBottom: '16px' 
-        }}>
-          <h3 style={{ color: 'white' }}>Leaderboard</h3>
-          <ModeToggle />
-        </div>
+        <h3 style={{ color: 'white', marginBottom: '16px' }}>Leaderboard</h3>
         <table style={{ width: '100%', borderCollapse: 'separate', borderSpacing: '0 8px' }}>
           <thead>
             <tr>
@@ -340,7 +332,7 @@ const CoinDetails = () => {
                     {row.user}
                   </a>
                 </td>
-                <td style={{ padding: '12px', color: 'white' }}>{row.amount}</td>
+                <td style={{ padding: '12px', color: 'white' }}>{formatNumberWithCommas(row.amount)}</td>
               </tr>
             ))}
           </tbody>
