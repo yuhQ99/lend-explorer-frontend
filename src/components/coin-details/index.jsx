@@ -347,14 +347,18 @@ const CoinDetails = () => {
         color: 'white', 
         marginBottom: '24px',
         display: 'flex',
+        flexDirection: ['xs', 'sm'].includes(window.innerWidth <= 768) ? 'column' : 'row',
+        gap: window.innerWidth <= 768 ? '16px' : '0',
         justifyContent: 'space-between',
-        alignItems: 'center'
+        alignItems: window.innerWidth <= 768 ? 'flex-start' : 'center'
       }}>
         <span>{symbol} Details</span>
         <div style={{
           display: 'flex',
           gap: '8px',
-          alignItems: 'center'
+          alignItems: 'center',
+          flexWrap: 'wrap', // Allow tokens to wrap on smaller screens
+          width: window.innerWidth <= 768 ? '100%' : 'auto' // Full width on mobile
         }}>
           {[
             'CORE',
@@ -387,6 +391,8 @@ const CoinDetails = () => {
                   justifyContent: 'center',
                   minWidth: 'fit-content',
                   cursor: 'pointer',
+                  flex: window.innerWidth <= 768 ? '1 1 calc(25% - 8px)' : 'auto', // 4 tokens per row on mobile
+                  textAlign: 'center'
                 }}
               >
                 {token}
