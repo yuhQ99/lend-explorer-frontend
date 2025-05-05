@@ -6,7 +6,7 @@ function truncateAddress(address) {
   }
 
 function formatNumberWithCommas(value, decimals = 2) {
-    if (isNaN(value)) return '0';
+    if (isNaN(value)) return '0.00';
     return Number(value).toLocaleString('en-US', {
       minimumFractionDigits: 0,
       maximumFractionDigits: decimals

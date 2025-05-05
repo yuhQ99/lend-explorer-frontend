@@ -143,7 +143,7 @@ const Table = ({ data, isLoading, isError, sortBy, headers, onSort }) => {
                     >
                       {truncateAddress(item?.user)}
                     </a>
-                  ) : item?.[header.valueKey] ? formatNumberWithCommas(item[header.valueKey]) : '0.00'}
+                  ) : item?.[header.valueKey] ? formatNumberWithCommas(item[header.valueKey]) : '0'}
                 </td>
               ))}
             </tr>
